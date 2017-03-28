@@ -1,9 +1,9 @@
 const path = require('path');
 
 module.exports = {
-  entry: "./material_you_and_i.js",
+  entry: "./frontend/material_you_and_i.js",
   output: {
-    path: path.resolve(__dirname, "frontend"),
+    path: path.resolve(__dirname),
     filename: "bundle.js",
   },
   module: {
