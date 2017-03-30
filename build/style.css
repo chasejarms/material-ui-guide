@@ -1,0 +1,135 @@
+/*
+color choices:
+
+primary-color: #03A9F4;
+secondary-color: #039BE5;
+
+*/
+
+.page-container {
+  display: flex;
+  justify-content: flex-start;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.live-components-with-code-container {
+  flex: 3 3 75%;
+  background-color: #FAFAFA;
+  overflow-y: auto;
+}
+
+.interactive-sidebar {
+  flex: 1 1 25%;
+  background-color: #039BE5;
+  min-width: 225px;
+  max-width: 300px;
+}
+
+.live-component-container {
+  box-shadow: 0px 5px 15px #777;
+  webkit-box-shadow: 0px 5px 15px #777;
+  -moz-box-shadow: 0px 5px 15px #777;
+  margin: 30px;
+  background-color: #FFFFFF
+}
+
+.live-code-container, .live-documentation-container {
+  margin: 30px;
+  background-color: #FFFFFF;
+}
+
+.live-component-container {
+  min-height: 200px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.documentation-form-inputs {
+  padding: 30px;
+}
+
+.live-code-container {
+  height: 200px;
+  min-height: 200px;
+  color: #424242;
+}
+
+.live-documentation-container {
+  min-height: 200px;
+  height: calc(100vh - 530px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.component-list-item {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFFFFF;
+  transition-duration: .1s;
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.component-list-item:hover {
+  cursor: pointer;
+  background-color: #1E88E5;
+}
+
+.live-documentation-tabs {
+  display: flex;
+  justify-content: flex-start;
+  height: 50px;
+  background-color: #29B6F6;
+}
+
+.live-documentation-tabs li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.live-documentation-tabs li:hover {
+  cursor: pointer;
+  background-color: #1E88E5;
+}
+
+.current-documentation {
+  padding: 30px;
+}
+
+/* default form types */
+
+.boolean-button {
+  margin-left: 30px !important;
+  background-color: #9575CD !important;
+  color: white !important;
+}
+
+.boolean-button:first-child {
+  margin-left: 0px !important;
+}
+
+.boolean-button:hover {
+  background-color: #673AB7 !important;
+}
+
+/* miscallaneous */
+
+.flat-button-display {
+  background-color: #29B6F6 !important;
+  color: white !important;
+}
+
+.flat-button-display:hover {
+  background-color: #1E88E5 !important;
+}

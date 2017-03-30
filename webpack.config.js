@@ -1,10 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: "./frontend/material_you_and_i.js",
+  context: __dirname,
+  entry: "./frontend/material_you_and_i.jsx",
   output: {
-    path: path.resolve(__dirname),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, 'build'),
+    filename: "bundle.js"
   },
   module: {
     loaders: [
