@@ -1,5 +1,6 @@
 import React from 'react';
 import FlatButton from 'material-ui/FlatButton';
+import CircularProgress from 'material-ui/CircularProgress';
 
 class LiveComponent extends React.Component {
   constructor(props) {
@@ -17,9 +18,9 @@ class LiveComponent extends React.Component {
   }
 
   _renderCorrectComponent(compName) {
+    const componentProperties = this.props.currentComponent.properties;
     switch(compName) {
-      case "Flat Button":
-        const componentProperties = this.props.currentComponent.properties;
+      case "FlatButton":
         const {fullWidth, label, href, disabled} = componentProperties;
         return <FlatButton
           className="flat-button-display"
@@ -28,6 +29,12 @@ class LiveComponent extends React.Component {
           href={href}
           disabled={disabled}
           target="_blank"
+          />;
+      case "CircularProgress":
+        const {size, thickness} = componentProperties;
+        return <CircularProgress
+          size={size}
+          thickness={thickness}
           />;
       default:
         return <FlatButton label="Default button"/>;

@@ -4,7 +4,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {Provider} from 'react-redux';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import AppBar from 'material-ui/AppBar';
 import InteractiveSidebar from './interactive_sidebar/interactive_sidebar';
 import LiveComponentsWithCode from './live_components_with_code/live_components_with_code';
 import {lightBlue500, blue600, lightBlue400, deepPurple300, deepPurple500} from 'material-ui/styles/colors';
@@ -15,9 +14,6 @@ injectTapEventPlugin();
 //
 
 const muiTheme = getMuiTheme({
-  appBar: {
-    height: 50,
-  },
   palette: {
     primary1Color: lightBlue500,
     primary2Color: blue600,

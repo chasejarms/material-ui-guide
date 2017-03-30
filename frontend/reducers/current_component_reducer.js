@@ -1,20 +1,13 @@
 import { GET_CURRENT_COMPONENT } from '../actions/component_actions';
 import { initialState, flatButtonHelper } from '../reducer_helpers/flat_button';
+import circularProgressHelper from '../reducer_helpers/circular_progress';
 
 const CurrentComponentReducer = (state = initialState(), action) => {
   switch (action.componentName) {
-    case "Flat Button":
+    case "FlatButton":
       return flatButtonHelper(state, action);
-    case "App Bar":
-      return {
-        name: "App Bar",
-        properties: {
-          title: "My Crazy App Bar"
-        },
-        documentation: {
-          title: "This will say a lot about the title that is currently being displayed"
-        }
-      };
+    case "CircularProgress":
+      return circularProgressHelper(state, action);
     default:
       return state;
   }

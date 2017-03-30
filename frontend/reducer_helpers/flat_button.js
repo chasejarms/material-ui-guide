@@ -1,12 +1,12 @@
 import merge from 'lodash/merge';
 
 export const initialState = () => ({
-  name: "Flat Button",
+  name: "FlatButton",
   properties: {
     fullWidth: false,
     href: "#",
     label: "Hover over me!",
-    disabled: true
+    disabled: false
   },
   documentation: {
     fullWidth: "The fullWidth property takes a boolean value to determine the button width.",
@@ -17,7 +17,7 @@ export const initialState = () => ({
 });
 
 export const flatButtonHelper = (state, action) => {
-  if (state.name !== "Flat Button") {
+  if (state.name !== "FlatButton") {
     return initialState();
   } else {
     if (!action.properties) {

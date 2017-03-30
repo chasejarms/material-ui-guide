@@ -37,6 +37,40 @@ secondary-color: #039BE5;
 .live-code-container, .live-documentation-container {
   margin: 30px;
   background-color: #FFFFFF;
+  font-family: 'Inconsolata',monospace;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.interior-live-code-container {
+  padding: 30px;
+  color: white;
+  line-height: 28px;
+}
+
+.atom-red {
+  color: #ef586f;
+}
+
+.atom-orange {
+  color: #d8985f;
+}
+
+.atom-green {
+  color: #51c67a;
+}
+
+.atom-grey {
+  color: #aab2bf;
+}
+
+.atom-purple {
+  color: #d55fde;
+}
+
+.interior-live-code-container .property {
+  margin-left: 30px;
 }
 
 .live-component-container {
@@ -54,14 +88,20 @@ secondary-color: #039BE5;
 }
 
 .live-code-container {
-  height: 200px;
-  min-height: 200px;
+  min-height: 300px;
+  height: calc(100vh - 580px);
   color: #424242;
+  background-color: #282c34;
+}
+
+.hljs {
+  padding: 30px;
+  font-size: 17px;
 }
 
 .live-documentation-container {
-  min-height: 200px;
-  height: calc(100vh - 530px);
+  height: 250px;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -105,6 +145,7 @@ secondary-color: #039BE5;
 
 .current-documentation {
   padding: 30px;
+  padding-bottom: 0px;
 }
 
 /* default form types */
@@ -132,4 +173,8 @@ secondary-color: #039BE5;
 
 .flat-button-display:hover {
   background-color: #1E88E5 !important;
+}
+
+code {
+  color: white;
 }

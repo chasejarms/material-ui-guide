@@ -1,6 +1,6 @@
 import { GET_ALL_COMPONENTS } from '../actions/component_actions';
 
-const initialState = ["Flat Button", "App Bar"];
+const initialState = ["FlatButton", "CircularProgress"];
 
 // add these in next
 

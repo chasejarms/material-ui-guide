@@ -20,6 +20,7 @@ class TextForm extends React.Component {
         underlineFocusStyle={{borderColor: this.props.muiTheme.palette.accent2Color}}
         onChange={this.handleTextChange}
         hintText={this.props.hintText}
+        value={this.props.value}
         />
     );
   }

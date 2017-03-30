@@ -7,10 +7,21 @@ import {connect} from 'react-redux';
 class FlatButtonFormType extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      textInput: ""
+    };
     this.onClickTrue = this.onClickTrue.bind(this);
     this.onClickFalse = this.onClickFalse.bind(this);
     this.displayCorrectFormType = this.displayCorrectFormType.bind(this);
     this.onTextChange = this.onTextChange.bind(this);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.currentTab !== prevProps.currentTab) {
+      this.setState({
+        textInput: ""
+      });
+    }
   }
 
   onClickTrue() {
@@ -35,6 +46,10 @@ class FlatButtonFormType extends React.Component {
     return (newInput) => {
       const properties = {};
       properties[propertyKey] = newInput;
+      this.setState({
+        textInput: newInput
+      });
+
       this.props.changeComponentRendering(
         this.props.name,
         properties
@@ -60,6 +75,7 @@ class FlatButtonFormType extends React.Component {
           <TextForm
             onTextChange={this.onTextChange(currentTab)}
             hintText="ex. http://www.google.com"
+            value={this.state.textInput}
             />
         );
       case "label":
@@ -67,8 +83,9 @@ class FlatButtonFormType extends React.Component {
           <TextForm
             onTextChange={this.onTextChange(currentTab)}
             hintText="Hover Over Me!"
+            value={this.state.textInput}
             />
-        )
+        );
       default:
         return (
           <BooleanForm

@@ -17,6 +17,18 @@ class LiveDocumentation extends React.Component {
     };
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    const { currentComponent: { name }} = this.props;
+    if (prevProps.currentComponent.name !== name) {
+      const {currentComponent} = this.props;
+      const componentProps = Object.keys(currentComponent.properties);
+      this.setState({
+        propertyKeys: componentProps,
+        currentTab: componentProps[0]
+      });
+    }
+  }
+
   render() {
     const {currentComponent:{name}} = this.props;
     return(
@@ -42,7 +54,6 @@ class LiveDocumentation extends React.Component {
   }
 
   _renderPropertyTabs() {
-
     return(
       <ul className="live-documentation-tabs">
         {this.state.propertyKeys.map((propName, idx) => {
