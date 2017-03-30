@@ -10,12 +10,12 @@ class BooleanForm extends React.Component {
     return(
       <div>
         <FlatButton
-          label="true"
+          label={this.props.trueLabel || "true"}
           className="boolean-button"
           onClick={this.props.onClickTrue}
           />
         <FlatButton
-          label="false"
+          label={this.props.falseLabel || "false"}
           className="boolean-button"
           onClick={this.props.onClickFalse}/>
       </div>

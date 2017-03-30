@@ -164,6 +164,10 @@ secondary-color: #039BE5;
   background-color: #673AB7 !important;
 }
 
+.form-slider {
+  margin-bottom: 20px !important;
+}
+
 /* miscallaneous */
 
 .flat-button-display {
@@ -177,4 +181,8 @@ secondary-color: #039BE5;
 
 code {
   color: white;
+}
+
+.blur-background {
+  filter: blur(30px);
 }

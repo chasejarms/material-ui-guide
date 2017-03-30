@@ -82,7 +82,7 @@ class FlatButtonFormType extends React.Component {
         return (
           <TextForm
             onTextChange={this.onTextChange(currentTab)}
-            hintText="Hover Over Me!"
+            hintText="I'm a flat button"
             value={this.state.textInput}
             />
         );

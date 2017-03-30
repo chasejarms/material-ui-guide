@@ -1,6 +1,7 @@
 import React from 'react';
 import FlatButtonFormType from './individual_component_forms/flat_button_form_type';
 import CircularProgressFormType from './individual_component_forms/circular_progress_form_type';
+import DatePickerFormType from './individual_component_forms/date_picker_form_type';
 
 class DocumentationForm extends React.Component {
   constructor(props) {
@@ -23,6 +24,8 @@ class DocumentationForm extends React.Component {
         return <FlatButtonFormType currentTab={currentTab}/>;
       case "CircularProgress":
         return <CircularProgressFormType currentTab={currentTab}/>;
+      case "DatePicker":
+        return <DatePickerFormType currentTab={currentTab}/>;
       default:
         return <div></div>;
     }

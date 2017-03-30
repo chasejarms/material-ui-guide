@@ -5,7 +5,7 @@ export const initialState = () => ({
   properties: {
     fullWidth: false,
     href: "#",
-    label: "Hover over me!",
+    label: "I'm a flat button!",
     disabled: false
   },
   documentation: {

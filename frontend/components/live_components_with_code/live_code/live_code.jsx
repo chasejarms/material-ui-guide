@@ -53,12 +53,22 @@ class LiveCode extends React.Component {
   }
 
   atomTextFromPropInfo(propKey, propValue, idx) {
-    if (typeof(propValue) === "boolean") {
+    const propType = typeof(propValue);
+    if (propType === "boolean") {
+
       return (
         <div key={idx}>
           <span className="property atom-orange">{propKey}</span>
           <span className="atom-grey">=</span>
           <span className="atom-orange">{propValue ? "true" : "false"}</span><br></br>
+        </div>
+      );
+    } else if (propType === "number") {
+      return (
+        <div key={idx}>
+          <span className="property atom-orange">{propKey}</span>
+          <span className="atom-grey">=</span>
+          <span className="atom-orange">{propValue}</span><br></br>
         </div>
       );
     } else {

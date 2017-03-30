@@ -1,6 +1,6 @@
 import { GET_ALL_COMPONENTS } from '../actions/component_actions';
 
-const initialState = ["FlatButton", "CircularProgress"];
+const initialState = ["FlatButton", "CircularProgress", "DatePicker"];
 
 // add these in next
 

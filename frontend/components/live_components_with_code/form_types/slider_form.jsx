@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'material-ui/Slider';
+import muiThemeable from 'material-ui/styles/muiThemeable';
 
 class SliderForm extends React.Component {
   constructor(props) {
@@ -33,15 +34,17 @@ class SliderForm extends React.Component {
   render() {
     const {min, max} = this.props;
     return(
-      <Slider
-        min={min}
-        max={max}
-        value={this.state.currentSliderValue}
-        onDragStop={this.onSlide}
-        onChange={this.handleSliderValue}
-        />
+      <div className="form-slider">
+        <Slider
+          min={min}
+          max={max}
+          value={this.state.currentSliderValue}
+          onDragStop={this.onSlide}
+          onChange={this.handleSliderValue}
+          />
+      </div>
     );
   }
 }
 
-export default SliderForm;
+export default muiThemeable()(SliderForm);

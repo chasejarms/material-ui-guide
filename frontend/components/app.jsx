@@ -27,7 +27,7 @@ const muiTheme = getMuiTheme({
 const App = ({ store }) => (
   <Provider store={store}>
     <MuiThemeProvider muiTheme={muiTheme}>
-      <div className="page-container">
+      <div className="page-container" id="page-container">
         <InteractiveSidebar/>
         <LiveComponentsWithCode/>
       </div>
