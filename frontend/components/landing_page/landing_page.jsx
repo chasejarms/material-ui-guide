@@ -8,6 +8,12 @@ class LandingPage extends React.Component {
     this.scrollToBottom = this.scrollToBottom.bind(this);
   }
 
+  componentDidMount() {
+    Scroll.Events.scrollEvent.register('end', () => {
+      console.log("reached end");
+    });
+  }
+
   scrollToBottom() {
     Scroll.animateScroll.scrollToBottom({
       duration: 1000
@@ -17,7 +23,6 @@ class LandingPage extends React.Component {
   render() {
     return(
       <div>
-        Something
         <div className="landing-page">
           <div>
             <div>
