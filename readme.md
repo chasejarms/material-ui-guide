@@ -9,7 +9,13 @@ Before using any code in your production projects, it is recommended you go thro
 
 ### Architecture
 
-### Technical Details
+Material You and I uses React with Redux to quickly manage state changes from user interaction. The live component, documentation container, and live code container all take in the same slice of state (currentComponent), which has three main keys - name, properties, and documentation.
+
+When the user interacts with the documentation container, an action is dispatched with the value of the input they are using as well as the property name. This triggers a re-render of the underlying Material UI component in view as well as the live code container.
+
+### Application View
+
+![Full Screen View](./docs/material-you-and-i-full-screen.gif)
 
 ### Roadmap
 
