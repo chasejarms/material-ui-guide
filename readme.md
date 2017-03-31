@@ -1,33 +1,22 @@
-## Material You and I
-
 ### Background
 
-Material UI is a popular tool for implementing smooth UI components in a React application. Material You and I is designed to speed up the process of learning Material UI.
+Material UI is a popular tool for implementing clean UI components in a React application. Aside from making development quicker, it also helps engineers create beautiful designs on the fly without having to focus on extensive styling. Material You and I is designed to quickly teach the Material UI Library with interactive components and example code ready for production.
 
-### MVP Functionality
+### Required Knowledge
 
-- [ ] Have 3 - 5 Material UI Component Demos with code examples.
-- [ ] Allow the demo to change based on user input.
-- [ ] Bug Free and sufficient styling.
+This guide is useful as an introduction to the components available in the Material UI library.
+Before using any code in your production projects, it is recommended you go through the [Getting Started](http://www.material-ui.com/#/get-started/installation) folder of the Material UI documentation which sets up the boilerplate for these components.
 
-### Wireframes
+### Architecture
 
-![wireframes](docs/material_ui.png)
+### Technical Details
 
-### Architecture and Technologies
+## Roadmap
 
-This project will be implemented with the following technologies:
+The current priorities for future implementation are:
 
-- React/Redux to manage the state of each components properties,
-- Material UI,
-- CSS to add any additional styling
+1. Implement a guided tour of the project to ensure the site is easy to understand and use.
 
-### Implementation Timeline
+2. Continue working through additional Material UI components until the entire library is included.
 
-**Day 1**: Get boilerplate setup (webpack, react/redux frontend folders, etc)
-
-**Day 2**: Learn about material UI and begin experimenting with a few of the features
-
-**Day 3**: Implement Redux to control the state of each Material UI component
-
-**Day 4**: Finalize the forms to change the state of each component, add in additional styling where necessary.
+3. Add in a copy to clipboard button for the code examples.
