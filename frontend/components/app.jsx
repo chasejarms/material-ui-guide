@@ -37,9 +37,9 @@ class App extends React.Component {
   }
 
   toggleLandingPage() {
-    this.setState({
-      showLandingPage: !this.state.showLandingPage
-    });
+    // this.setState({
+    //   showLandingPage: !this.state.showLandingPage
+    // });
   }
 
   landingPageIfShowIsTrue() {
