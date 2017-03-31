@@ -16,6 +16,7 @@ secondary-color: #039BE5;
 .live-components-with-code-container {
   flex: 3 3 75%;
   background-color: #FAFAFA;
+  /*background-color: #D0D0D0;*/
   overflow-y: auto;
   flex-direction: column;
   display: flex;
@@ -34,6 +35,9 @@ secondary-color: #039BE5;
   flex-direction: column;
   margin: 30px;
   margin-top: 0px;
+  box-shadow: 0px 5px 15px #777;
+  webkit-box-shadow: 0px 5px 15px #777;
+  -moz-box-shadow: 0px 5px 15px #777;
 }
 
 .live-component-container {
@@ -270,8 +274,3 @@ code {
 ::-webkit-scrollbar-thumb {
   background: transparent;
 }
-
-@-webkit-keyframes pulse {to {box-shadow: 0 0 0 300px rgba(232, 76, 61, 0);}}
-@-moz-keyframes pulse {to {box-shadow: 0 0 0 300px rgba(232, 76, 61, 0);}}
-@-ms-keyframes pulse {to {box-shadow: 0 0 0 300px rgba(232, 76, 61, 0);}}
-@keyframes pulse {to {box-shadow: 0 0 0 300px rgba(232, 76, 61, 0);}}

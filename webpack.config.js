@@ -1,11 +1,13 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   context: __dirname,
   entry: "./frontend/material_you_and_i.jsx",
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: "bundle.js"
+    path: path.join(__dirname, 'build'),
+    filename: 'bundle.js',
+    publicPath: '/build/'
   },
   module: {
     loaders: [
@@ -19,6 +21,19 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
+  ],
   devtool: 'source-map',
   resolve: {
     extensions: [".js", ".jsx", "*"]
