@@ -29,23 +29,6 @@ const muiTheme = getMuiTheme({
 class App extends React.Component {
   constructor(store) {
     super(store);
-    this.state = {
-      showLandingPage: true
-    };
-    this.toggleLandingPage = this.toggleLandingPage.bind(this);
-    this.landingPageIfShowIsTrue = this.landingPageIfShowIsTrue.bind(this);
-  }
-
-  toggleLandingPage() {
-    // this.setState({
-    //   showLandingPage: !this.state.showLandingPage
-    // });
-  }
-
-  landingPageIfShowIsTrue() {
-    if (this.state.showLandingPage) {
-      return <LandingPage toggleLandingPage={this.toggleLandingPage}/>;
-    }
   }
 
   render() {
@@ -54,7 +37,7 @@ class App extends React.Component {
       <Provider store={store}>
         <MuiThemeProvider muiTheme={muiTheme}>
           <div className="page-with-landing">
-            { this.landingPageIfShowIsTrue() }
+            <LandingPage/>
             <div className="page-container" id="page-container">
               <InteractiveSidebar/>
               <LiveComponentsWithCode/>
