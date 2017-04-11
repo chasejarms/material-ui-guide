@@ -107,6 +107,7 @@ secondary-color: #039BE5;
 .live-code-container {
   color: #424242;
   background-color: #282c34;
+  overflow-y: scroll;
 }
 
 .hljs {
