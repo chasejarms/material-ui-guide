@@ -1,6 +1,6 @@
 import merge from 'lodash/merge';
 
-const initialState = () => ({
+export const initialState = () => ({
   name: "CircularProgress",
   properties: {
     size: 40,

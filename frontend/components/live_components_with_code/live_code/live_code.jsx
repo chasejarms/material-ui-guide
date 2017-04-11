@@ -27,11 +27,11 @@ class LiveCode extends React.Component {
 
           {atomImport}
 
-          <span className="atom-red">{`<${name}`}</span><br></br>
+          <span className="atom-red">{`<${name}`}</span>
 
           {atomStyling}
 
-          <span className="atom-red">{"/>"}</span>
+          <span className="closing-brace atom-red">{" />"}</span>
         </div>
       </div>
     );
@@ -42,9 +42,9 @@ class LiveCode extends React.Component {
     return (
       <div>
         <span className="atom-purple">import </span>
-        <span className="atom-red">{name} </span>
-        <span className="atom-purple">from </span>
-        <span className="atom-green">{`"material-ui/${name}"`}</span>
+        <span className="atom-red property">{name} </span>
+        <span className="atom-purple property">from </span>
+        <span className="atom-green property">{`"material-ui/${name}"`}</span>
         <span className="atom-grey">;</span>
         <br></br>
         <br></br>
@@ -52,32 +52,34 @@ class LiveCode extends React.Component {
     );
   }
 
+  ///
+
   atomTextFromPropInfo(propKey, propValue, idx) {
     const propType = typeof(propValue);
     if (propType === "boolean") {
 
       return (
-        <div key={idx}>
-          <span className="property atom-orange">{propKey}</span>
+        <span key={idx}>
+          <span className="property atom-orange"> {propKey}</span>
           <span className="atom-grey">=</span>
-          <span className="atom-orange">{propValue ? "true" : "false"}</span><br></br>
-        </div>
+          <span className="atom-orange">{propValue ? "true" : "false"}</span>
+        </span>
       );
     } else if (propType === "number") {
       return (
-        <div key={idx}>
-          <span className="property atom-orange">{propKey}</span>
+        <span key={idx}>
+          <span className="property atom-orange"> {propKey}</span>
           <span className="atom-grey">=</span>
-          <span className="atom-orange">{propValue}</span><br></br>
-        </div>
+          <span className="atom-orange">{propValue}</span>
+        </span>
       );
     } else {
       return (
-        <div key={idx}>
-          <span className="property atom-orange">{propKey}</span>
+        <span key={idx}>
+          <span className="property atom-orange"> {propKey}</span>
           <span className="atom-grey">=</span>
-          <span className="atom-green">{`"${propValue}"`}</span><br></br>
-        </div>
+          <span className="atom-green">{`"${propValue}"`}</span>
+        </span>
       );
     }
   }
