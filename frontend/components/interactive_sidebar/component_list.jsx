@@ -1,7 +1,7 @@
 import React from 'react';
 import ComponentListItemContainer from './component_list_item_container';
 
-class ComponentList extends React.Component {
+export default class ComponentList extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -14,11 +14,12 @@ class ComponentList extends React.Component {
         name={compName}/>;
     });
     return (
-      <ul>
-        { componentItems }
-      </ul>
+      <div>
+        <div className='tour-aside'></div>
+        <ul>
+          { componentItems }
+        </ul>
+      </div>
     );
   }
 }
-
-export default ComponentList;

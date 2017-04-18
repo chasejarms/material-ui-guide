@@ -273,3 +273,11 @@ code {
 ::-webkit-scrollbar-thumb {
   background: transparent;
 }
+
+/*styling for the walk through*/
+
+.demo-call-to-action {
+  position: absolute;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+}
